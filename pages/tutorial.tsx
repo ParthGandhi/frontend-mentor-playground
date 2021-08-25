@@ -1,9 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { NextPage } from "next";
-import Image from "next/image";
-
-import beachWorkImage from "../public/beach-work.jpg";
-import logo from "../public/workaction-logo.svg";
 
 /**
  * https://github.com/tailwindlabs/tailwindcss-from-zero-to-production
@@ -30,12 +26,15 @@ const TailwindTutorial: NextPage = () => {
               locations so you can enjoy some nice weather even when you're not
               on vacation.
             </p>
-            <div className="mt-4 sm:mt-6">
+            <div className="mt-4 sm:mt-6 space-x-2">
               <a
-                className="bg-indigo-500 text-white px-5 py-3 inline-block shadow-lg rounded-lg uppercase tracking-wider font-semibold text-sm sm:text-base"
+                className="btn btn-primary shadow-lg hover:-translate-y-0.5 transform transition"
                 href="#"
               >
                 Book your escape
+              </a>
+              <a className="btn btn-secondary" href="#">
+                Learn more
               </a>
             </div>
           </div>
