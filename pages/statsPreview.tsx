@@ -7,7 +7,7 @@ import { NextPage } from "next";
 const StatsPreviewCard: NextPage = () => {
   return (
     <div className="bg-gray-900 w-screen h-screen flex items-center justify-center">
-      <div className="grid grid-cols-2 max-w-4xl rounded-xl overflow-hidden">
+      <div className="grid grid-cols-2 max-w-4xl rounded-xl overflow-hidden h-80">
         <div className="col-span-1 p-10 bg-gray-800">
           <h1 className="text-gray-100 text-3xl font-semibold">
             Get <span className="text-purple-600">insights</span> that help your
@@ -42,7 +42,12 @@ const StatsPreviewCard: NextPage = () => {
           </div>
         </div>
         <div className="col-span-1">
-          <img src="http://placekitten.com/200/300" alt="kitten placeholder" />
+          {/** why don't object-cover object-center work here? */}
+          <img
+            src="http://placekitten.com/300/300"
+            alt="kitten placeholder"
+            className="h-full w-full object-center object-cover"
+          />
         </div>
       </div>
     </div>
