@@ -18,22 +18,26 @@ const StatsPreviewCard: NextPage = () => {
             rhoncus sapien finibus erat euismod interdum.
           </p>
           <div className="grid grid-cols-3 mt-10">
-            <div className="col-span-1 uppercase">
-              <span className="text-gray-200 font-bold">10k+</span>
+            <div className="col-span-1">
+              <span className="text-gray-200 font-bold tracking-wide">
+                10k+
+              </span>
               <br />
               <span className="text-gray-300 text-xs font-thin tracking-widest">
                 companies
               </span>
             </div>
             <div className="col-span-1 uppercase">
-              <span className="text-gray-200 font-bold">314</span>
+              <span className="text-gray-200 font-bold tracking-wide">314</span>
               <br />
               <span className="text-gray-300 text-xs font-thin tracking-widest">
                 templates
               </span>
             </div>
             <div className="col-span-1 uppercase">
-              <span className="text-gray-200 font-bold">12M+</span>
+              <span className="text-gray-200 font-bold tracking-wide">
+                12M+
+              </span>
               <br />
               <span className="text-gray-300 text-xs font-thin tracking-widest">
                 queries
