@@ -7,31 +7,37 @@ import { NextPage } from "next";
 const StatsPreviewCard: NextPage = () => {
   return (
     <div className="bg-gray-900 w-screen h-screen flex items-center justify-center">
-      <div className="grid grid-cols-2 max-w-3xl rounded-xl overflow-hidden">
-        <div className="col-span-1 p-10 bg-gray-800 space-y-5">
+      <div className="grid grid-cols-2 max-w-4xl rounded-xl overflow-hidden">
+        <div className="col-span-1 p-10 bg-gray-800">
           <h1 className="text-gray-100 text-3xl font-semibold">
             Get <span className="text-purple-600">insights</span> that help your
             business grow.
           </h1>
-          <p className="text-purple-100 leading-[1.375rem]">
+          <p className="text-purple-100 leading-[1.375rem] text-sm font-extralight mt-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
             rhoncus sapien finibus erat euismod interdum.
           </p>
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-3 mt-10">
             <div className="col-span-1 uppercase">
-              <span>10k+</span>
+              <span className="text-gray-200 font-bold">10k+</span>
               <br />
-              <span>companies</span>
+              <span className="text-gray-300 text-xs font-thin tracking-widest">
+                companies
+              </span>
             </div>
             <div className="col-span-1 uppercase">
-              <span>314</span>
+              <span className="text-gray-200 font-bold">314</span>
               <br />
-              <span>templates</span>
+              <span className="text-gray-300 text-xs font-thin tracking-widest">
+                templates
+              </span>
             </div>
             <div className="col-span-1 uppercase">
-              <span>12M+</span>
+              <span className="text-gray-200 font-bold">12M+</span>
               <br />
-              <span>queries</span>
+              <span className="text-gray-300 text-xs font-thin tracking-widest">
+                queries
+              </span>
             </div>
           </div>
         </div>
