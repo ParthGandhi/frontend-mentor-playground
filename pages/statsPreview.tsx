@@ -7,7 +7,7 @@ import { NextPage } from "next";
 const StatsPreviewCard: NextPage = () => {
   return (
     <div className="bg-gray-900 w-screen h-screen flex items-center justify-center">
-      <div className="grid grid-cols-1 grid-rows-3 w-3/4 h-3/4 sm:h-1/2 md:h-1/2 lg:max-h-80 max-w-xs lg:grid-rows-1 lg:grid-cols-2 lg:max-w-4xl rounded-xl overflow-hidden ">
+      <div className="grid grid-cols-1 grid-rows-3 w-3/4 h-96 sm:h-1/2 lg:max-h-80 max-w-xs lg:grid-rows-1 lg:grid-cols-2 lg:max-w-4xl rounded-xl overflow-hidden ">
         <div className="lg:hidden row-span-1">
           <img
             src="http://placekitten.com/300/300"
@@ -24,8 +24,8 @@ const StatsPreviewCard: NextPage = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
             rhoncus sapien finibus erat euismod interdum.
           </p>
-          <div className="grid grid-rows-3 sm:grid-cols-3 mt-2 sm:mt-10">
-            <div className="col-span-1 inline-block text-center">
+          <div className="grid grid-rows-3 sm:grid-cols-3 mt-1 sm:mt-10">
+            <div className="col-span-1 inline-block text-center leading-3">
               <span className="text-gray-200 font-bold tracking-wide text-xs sm:text-base">
                 10k+
               </span>
@@ -34,7 +34,7 @@ const StatsPreviewCard: NextPage = () => {
                 companies
               </span>
             </div>
-            <div className="col-span-1 uppercase inline-block text-center">
+            <div className="col-span-1 uppercase inline-block text-center leading-3 mt-1">
               <span className="text-gray-200 font-bold tracking-wide text-xs sm:text-base">
                 314
               </span>
@@ -43,7 +43,7 @@ const StatsPreviewCard: NextPage = () => {
                 templates
               </span>
             </div>
-            <div className="col-span-1 uppercase inline-block text-center">
+            <div className="col-span-1 uppercase inline-block text-center leading-3 mt-1">
               <span className="text-gray-200 font-bold tracking-wide text-xs sm:text-base">
                 12M+
               </span>
