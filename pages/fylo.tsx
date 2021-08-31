@@ -63,6 +63,27 @@ const FeaturesSection = () => {
   );
 };
 
+const StayProductiveSection = () => {
+  return (
+    <div className="outline-white flex flex-col items-center">
+      <img src="/fylo/illustration-stay-productive.png" className="w-72" />
+      <h3 className="text-gray-200 mt-5">Stay productive, wherever you are</h3>
+      <p className="text-gray-300 text-sm p-6">
+        Never let location be an issue when accessing your files. Fylo has you
+        covered for all of your file storage needs.
+        <br />
+        <br />
+        Securely share files and folders with friends, family, and colleagues
+        for live collaboration. No email attachments required.
+      </p>
+    </div>
+  );
+};
+
+const Testimonials = () => {
+  return <div className="outline-white"></div>;
+};
+
 /**
  * https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd
  */
@@ -94,6 +115,7 @@ const FyloLandingPage: NextPage = () => {
         </div>
       </div>
       <FeaturesSection />
+      <StayProductiveSection />
       <Footer />
     </div>
   );
