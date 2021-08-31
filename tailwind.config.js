@@ -7,6 +7,7 @@ module.exports = {
         fyloBlue: "hsl(218, 28%, 13%)",
         fyloBlueLight: "hsl(217, 28%, 15%)",
         fyloBlueXLight: "hsl(219, 30%, 18%)",
+        fyloBlueFooter: "hsl(216, 53%, 9%)",
       },
     },
   },

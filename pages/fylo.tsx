@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import { NextPage } from "next";
-import Head from "next/head";
+import { LogoFacebook, LogoTwitter, LogoInstagram } from "react-ionicons";
 
 const Header = () => {
   return (
@@ -11,7 +11,26 @@ const Header = () => {
 
 const Footer = () => {
   return (
-    <div className="bg-fyloBlueLight text-gray-200 outline-white">Footer</div>
+    <div className="bg-fyloBlueFooter outline-white">
+      {/** Contact information */}
+      <div className="">
+        <img src="" />
+      </div>
+
+      {/** Pages */}
+      <div className="">
+        <a href="#" className="text-gray-200 text-sm font-semibold">
+          About Us
+        </a>
+      </div>
+
+      {/** Social */}
+      <div className="flex space-x-2 justify-center p-5">
+        <LogoFacebook color={"#ffffff"} height="20px" width="20px" />
+        <LogoTwitter color={"#ffffff"} height="20px" width="20px" />
+        <LogoInstagram color={"#ffffff"} height="20px" width="20px" />
+      </div>
+    </div>
   );
 };
 
