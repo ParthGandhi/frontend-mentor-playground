@@ -80,8 +80,62 @@ const StayProductiveSection = () => {
   );
 };
 
+const TestimonialCard = ({
+  image,
+  name,
+  title,
+  content,
+}: {
+  image: string;
+  name: string;
+  title: string;
+  content: string;
+}) => {
+  return (
+    <div className="outline-white w-64 bg-fyloBlueXLight p-5 rounded-sm">
+      <p className="text-gray-300 text-xs font-light leading-4">{content}</p>
+      <div className="mt-3 flex">
+        <img src={image} className="w-8 h-8 rounded-full" />
+        <div className="ml-2">
+          <div className="text-gray-200 text-xs">{name}</div>
+          <div className="text-gray-400 text-xs">{title}</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Testimonials = () => {
-  return <div className="outline-white"></div>;
+  const testimonials = [
+    {
+      image: "/fylo/profile-1.jpg",
+      title: "Founder & CEO, Huddle",
+      name: "Satish Patel",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac dolor aliquam, consectetur dui at, dapibus felis.",
+    },
+    {
+      image: "/fylo/profile-2.jpg",
+      title: "Founder & CEO, Huddle",
+      name: "Bruce McKenzie",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac dolor aliquam, consectetur dui at, dapibus felis.",
+    },
+    {
+      image: "/fylo/profile-3.jpg",
+      title: "Founder & CEO, Huddle",
+      name: "Iva Boyd",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac dolor aliquam, consectetur dui at, dapibus felis.",
+    },
+  ];
+  return (
+    <div className="outline-white flex flex-wrap items-center justify-center space-y-6 my-36">
+      {testimonials.map((t) => (
+        <TestimonialCard key={t.name} {...t} />
+      ))}
+    </div>
+  );
 };
 
 /**
@@ -116,6 +170,7 @@ const FyloLandingPage: NextPage = () => {
       </div>
       <FeaturesSection />
       <StayProductiveSection />
+      <Testimonials />
       <Footer />
     </div>
   );
