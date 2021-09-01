@@ -5,12 +5,13 @@ import { LogoFacebook, LogoTwitter, LogoInstagram } from "react-ionicons";
 
 const Footer = () => {
   return (
-    <div className="bg-fyloBlueFooter outline-white">
-      <div className="grid grid-cols-1 mx-5">
+    <div className="bg-fyloBlueFooter ">
+      <img src="/fylo/logo.svg" className="mx-8 h-12 my-5" />
+
+      <div className="grid grid-cols-1 mx-10 my-5 gap-y-9 gap-x-5 md:grid-cols-2 lg:grid-cols-4">
         {/** Contact information */}
         <div className="space-y-2">
-          <img src="/fylo/logo.svg" className="mx-8 h-12 my-5" />
-          <div className="flex space-x-3 outline-white">
+          <div className="flex space-x-3 ">
             <img src="/fylo/icon-location.svg" className="h-4" />
             <p className="text-gray-200 text-sm max-w-xs">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
@@ -19,7 +20,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="space-y-3 my-5">
+        <div className="space-y-2 ">
           <div className="flex space-x-3">
             <img src="/fylo/icon-phone.svg" className="h-4" />
             <p className="text-gray-200 text-sm max-w-xs">+1-543-123-4567</p>
@@ -31,36 +32,34 @@ const Footer = () => {
         </div>
 
         {/** Pages */}
-        <div className="outline-white flex-col">
-          <div className="grid grid-cols-1 space-y-2 outline-white my-12 w-44">
-            <a href="#" className="text-gray-200 text-sm font-light">
-              About Us
-            </a>
-            <a href="#" className="text-gray-200 text-sm font-light">
-              Jobs
-            </a>
-            <a href="#" className="text-gray-200 text-sm font-light">
-              Press
-            </a>
-            <a href="#" className="text-gray-200 text-sm font-light">
-              Blog
-            </a>
-          </div>
-          <div className="grid grid-cols-1 space-y-2 outline-white my-12 w-44">
-            <a href="#" className="text-gray-200 text-sm font-light">
-              Contact Us
-            </a>
-            <a href="#" className="text-gray-200 text-sm font-light">
-              Terms
-            </a>
-            <a href="#" className="text-gray-200 text-sm font-light">
-              Privacy
-            </a>
-          </div>
+        <div className="grid grid-cols-1 space-y-2">
+          <a href="#" className="text-gray-200 text-sm font-light">
+            About Us
+          </a>
+          <a href="#" className="text-gray-200 text-sm font-light">
+            Jobs
+          </a>
+          <a href="#" className="text-gray-200 text-sm font-light">
+            Press
+          </a>
+          <a href="#" className="text-gray-200 text-sm font-light">
+            Blog
+          </a>
+        </div>
+        <div className="grid grid-cols-1 space-y-2">
+          <a href="#" className="text-gray-200 text-sm font-light">
+            Contact Us
+          </a>
+          <a href="#" className="text-gray-200 text-sm font-light">
+            Terms
+          </a>
+          <a href="#" className="text-gray-200 text-sm font-light">
+            Privacy
+          </a>
         </div>
       </div>
       {/** Social */}
-      <div className="space-x-2 outline-white flex w-40 h-6 justify-center m-auto">
+      <div className="space-x-2  flex w-40 h-6 justify-center m-auto">
         <LogoFacebook color={"#ffffff"} height="20px" width="20px" />
         <LogoTwitter color={"#ffffff"} height="20px" width="20px" />
         <LogoInstagram color={"#ffffff"} height="20px" width="20px" />
@@ -79,7 +78,7 @@ const FeatureSection = ({
   content: string;
 }) => {
   return (
-    <div className="flex flex-col items-center mx-5 my-5 w-56 outline-white">
+    <div className="flex flex-col items-center mx-5 my-5 w-56 ">
       <img src={image} className="w-auto h-16" />
       <h4 className="text-gray-200 text-l mt-4">{title}</h4>
       <p className="text-gray-300 text-center text-xs p-3">{content}</p>
@@ -109,7 +108,7 @@ const FeaturesSection = () => {
     },
   ];
   return (
-    <div className="flex flex-wrap justify-center my-12 outline-white">
+    <div className="flex flex-wrap justify-center my-12 ">
       {features.map((f) => (
         <FeatureSection key={f.title} {...f} />
       ))}
@@ -198,22 +197,22 @@ const Testimonials = () => {
 
 const PrimaryDescriptionCTA = () => {
   return (
-    <div className="pt-5 outline-white">
-      <div className="bg-fyloBlueLight outline-white">
+    <div className="pt-5 ">
+      <div className="bg-fyloBlueLight ">
         <img
           src="/fylo/illustration-intro.png"
           className="relative z-10 w-96 mx-auto"
         />
       </div>
       <img
-        className="relative -mt-16 outline-white mx-auto"
+        className="relative -mt-16  mx-auto"
         src="/fylo/bg-curvy-mobile.svg"
       />
       <div className="mx-auto">
-        <h3 className="text-gray-300 outline-white text-center text-xl font-bold mx-auto my-5 lg:max-w-md lg:text-3xl">
+        <h3 className="text-gray-300  text-center text-xl font-bold mx-auto my-5 max-w-md md:text-3xl lg:text-4xl">
           All your files in one secure location, accessible anywhere.
         </h3>
-        <p className="text-center text-gray-200 text-sm font-thin my-5 max-w-xs outline-white mx-auto lg:text-md lg:max-w-sm">
+        <p className="text-center text-gray-200 text-sm font-thin my-5 max-w-xs  mx-auto lg:text-md lg:max-w-sm">
           Fylo stores all your most important files in one secure location.
           Access them wherever you need, share and collaborate with friends,
           family, and co-workers.
