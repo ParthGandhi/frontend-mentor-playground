@@ -79,8 +79,8 @@ const FeatureSection = ({
   content: string;
 }) => {
   return (
-    <div className="flex flex-col items-center mx-5 my-5 w-56">
-      <img src={image} className="w-14" />
+    <div className="flex flex-col items-center mx-5 my-5 w-56 outline-white">
+      <img src={image} className="w-auto h-16" />
       <h4 className="text-gray-200 text-l mt-4">{title}</h4>
       <p className="text-gray-300 text-center text-xs p-3">{content}</p>
     </div>
@@ -109,7 +109,7 @@ const FeaturesSection = () => {
     },
   ];
   return (
-    <div className="flex flex-wrap justify-center my-12">
+    <div className="flex flex-wrap justify-center my-12 outline-white">
       {features.map((f) => (
         <FeatureSection key={f.title} {...f} />
       ))}
@@ -196,24 +196,24 @@ const Testimonials = () => {
   );
 };
 
-/**
- * https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd
- */
-const FyloLandingPage: NextPage = () => {
+const PrimaryDescriptionCTA = () => {
   return (
-    <div className="h-full w-full bg-fyloBlue">
+    <div className="pt-5 outline-white">
       <div className="bg-fyloBlueLight outline-white">
-        <img src="/fylo/illustration-intro.png" className="relative z-10" />
+        <img
+          src="/fylo/illustration-intro.png"
+          className="relative z-10 w-96 mx-auto"
+        />
       </div>
       <img
-        className="relative -mt-16 outline-white"
+        className="relative -mt-16 outline-white mx-auto"
         src="/fylo/bg-curvy-mobile.svg"
       />
-      <div>
-        <h3 className="text-gray-300 outline-white text-center text-xl font-bold m-5">
+      <div className="mx-auto">
+        <h3 className="text-gray-300 outline-white text-center text-xl font-bold mx-auto my-5 lg:max-w-md lg:text-3xl">
           All your files in one secure location, accessible anywhere.
         </h3>
-        <p className="text-center text-gray-200 text-sm font-thin m-6">
+        <p className="text-center text-gray-200 text-sm font-thin my-5 max-w-xs outline-white mx-auto lg:text-md lg:max-w-sm">
           Fylo stores all your most important files in one secure location.
           Access them wherever you need, share and collaborate with friends,
           family, and co-workers.
@@ -225,6 +225,17 @@ const FyloLandingPage: NextPage = () => {
           </button>
         </div>
       </div>
+    </div>
+  );
+};
+
+/**
+ * https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd
+ */
+const FyloLandingPage: NextPage = () => {
+  return (
+    <div className="h-full w-full bg-fyloBlue">
+      <PrimaryDescriptionCTA />
       <FeaturesSection />
       <StayProductiveSection />
       <Testimonials />
