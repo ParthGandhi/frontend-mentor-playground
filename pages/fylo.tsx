@@ -3,12 +3,6 @@
 import { NextPage } from "next";
 import { LogoFacebook, LogoTwitter, LogoInstagram } from "react-ionicons";
 
-const Header = () => {
-  return (
-    <div className="bg-fyloBlueLight text-gray-200 outline-white">Header</div>
-  );
-};
-
 const Footer = () => {
   return (
     <div className="bg-fyloBlueFooter outline-white">
@@ -85,7 +79,7 @@ const FeatureSection = ({
   content: string;
 }) => {
   return (
-    <div className="flex flex-col items-center outline-white mx-5 my-5 w-56">
+    <div className="flex flex-col items-center mx-5 my-5 w-56">
       <img src={image} className="w-14" />
       <h4 className="text-gray-200 text-l mt-4">{title}</h4>
       <p className="text-gray-300 text-center text-xs p-3">{content}</p>
@@ -115,7 +109,7 @@ const FeaturesSection = () => {
     },
   ];
   return (
-    <div className="outline-white flex flex-wrap justify-center my-12">
+    <div className="flex flex-wrap justify-center my-12">
       {features.map((f) => (
         <FeatureSection key={f.title} {...f} />
       ))}
@@ -125,17 +119,21 @@ const FeaturesSection = () => {
 
 const StayProductiveSection = () => {
   return (
-    <div className="outline-white flex flex-col items-center">
+    <div className="flex flex-col md:flex-row items-center mx-auto md:max-w-2xl">
       <img src="/fylo/illustration-stay-productive.png" className="w-72" />
-      <h3 className="text-gray-200 mt-5">Stay productive, wherever you are</h3>
-      <p className="text-gray-300 text-sm p-6">
-        Never let location be an issue when accessing your files. Fylo has you
-        covered for all of your file storage needs.
-        <br />
-        <br />
-        Securely share files and folders with friends, family, and colleagues
-        for live collaboration. No email attachments required.
-      </p>
+      <div className="max-w-md p-6">
+        <h3 className="text-gray-200 md:text-3xl">
+          Stay productive, wherever you are
+        </h3>
+        <p className="text-gray-300 text-xs max-w-xs">
+          Never let location be an issue when accessing your files. Fylo has you
+          covered for all of your file storage needs.
+          <br />
+          <br />
+          Securely share files and folders with friends, family, and colleagues
+          for live collaboration. No email attachments required.
+        </p>
+      </div>
     </div>
   );
 };
@@ -152,7 +150,7 @@ const TestimonialCard = ({
   content: string;
 }) => {
   return (
-    <div className="outline-white w-64 bg-fyloBlueXLight p-5 rounded-sm mx-5 my-5">
+    <div className="w-64 bg-fyloBlueXLight p-5 rounded-sm mx-5 my-5">
       <p className="text-gray-300 text-xs font-light leading-4">{content}</p>
       <div className="mt-3 flex">
         <img src={image} className="w-8 h-8 rounded-full" />
@@ -190,7 +188,7 @@ const Testimonials = () => {
     },
   ];
   return (
-    <div className="outline-white flex flex-wrap items-center justify-center my-12">
+    <div className="flex flex-wrap items-center justify-center my-12">
       {testimonials.map((t) => (
         <TestimonialCard key={t.name} {...t} />
       ))}
@@ -204,7 +202,6 @@ const Testimonials = () => {
 const FyloLandingPage: NextPage = () => {
   return (
     <div className="h-full w-full bg-fyloBlue">
-      <Header />
       <div className="bg-fyloBlueLight outline-white">
         <img src="/fylo/illustration-intro.png" className="relative z-10" />
       </div>
