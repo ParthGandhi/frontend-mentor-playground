@@ -12,20 +12,61 @@ const Header = () => {
 const Footer = () => {
   return (
     <div className="bg-fyloBlueFooter outline-white">
-      {/** Contact information */}
-      <div className="">
-        <img src="" />
-      </div>
+      <div className="grid grid-cols-1 mx-5">
+        {/** Contact information */}
+        <div className="space-y-2">
+          <img src="/fylo/logo.svg" className="mx-8 h-12 my-5" />
+          <div className="flex space-x-3 outline-white">
+            <img src="/fylo/icon-location.svg" className="h-4" />
+            <p className="text-gray-200 text-sm max-w-xs">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+              ac dolor aliquam, consectetur dui at, dapibus felis.
+            </p>
+          </div>
+        </div>
 
-      {/** Pages */}
-      <div className="">
-        <a href="#" className="text-gray-200 text-sm font-semibold">
-          About Us
-        </a>
-      </div>
+        <div className="space-y-3 my-5">
+          <div className="flex space-x-3">
+            <img src="/fylo/icon-phone.svg" className="h-4" />
+            <p className="text-gray-200 text-sm max-w-xs">+1-543-123-4567</p>
+          </div>
+          <div className="flex space-x-3">
+            <img src="/fylo/icon-email.svg" className="h-4" />
+            <p className="text-gray-200 text-sm max-w-xs">example@fylo.com</p>
+          </div>
+        </div>
 
+        {/** Pages */}
+        <div className="outline-white flex-col">
+          <div className="grid grid-cols-1 space-y-2 outline-white my-12 w-44">
+            <a href="#" className="text-gray-200 text-sm font-light">
+              About Us
+            </a>
+            <a href="#" className="text-gray-200 text-sm font-light">
+              Jobs
+            </a>
+            <a href="#" className="text-gray-200 text-sm font-light">
+              Press
+            </a>
+            <a href="#" className="text-gray-200 text-sm font-light">
+              Blog
+            </a>
+          </div>
+          <div className="grid grid-cols-1 space-y-2 outline-white my-12 w-44">
+            <a href="#" className="text-gray-200 text-sm font-light">
+              Contact Us
+            </a>
+            <a href="#" className="text-gray-200 text-sm font-light">
+              Terms
+            </a>
+            <a href="#" className="text-gray-200 text-sm font-light">
+              Privacy
+            </a>
+          </div>
+        </div>
+      </div>
       {/** Social */}
-      <div className="flex space-x-2 justify-center p-5">
+      <div className="space-x-2 outline-white flex w-40 h-6 justify-center m-auto">
         <LogoFacebook color={"#ffffff"} height="20px" width="20px" />
         <LogoTwitter color={"#ffffff"} height="20px" width="20px" />
         <LogoInstagram color={"#ffffff"} height="20px" width="20px" />
@@ -44,7 +85,7 @@ const FeatureSection = ({
   content: string;
 }) => {
   return (
-    <div className="flex flex-col items-center outline-white mx-4">
+    <div className="flex flex-col items-center outline-white mx-5 my-5 w-56">
       <img src={image} className="w-14" />
       <h4 className="text-gray-200 text-l mt-4">{title}</h4>
       <p className="text-gray-300 text-center text-xs p-3">{content}</p>
@@ -74,7 +115,7 @@ const FeaturesSection = () => {
     },
   ];
   return (
-    <div className="outline-white space-y-16 my-36">
+    <div className="outline-white flex flex-wrap justify-center my-12">
       {features.map((f) => (
         <FeatureSection key={f.title} {...f} />
       ))}
@@ -111,7 +152,7 @@ const TestimonialCard = ({
   content: string;
 }) => {
   return (
-    <div className="outline-white w-64 bg-fyloBlueXLight p-5 rounded-sm">
+    <div className="outline-white w-64 bg-fyloBlueXLight p-5 rounded-sm mx-5 my-5">
       <p className="text-gray-300 text-xs font-light leading-4">{content}</p>
       <div className="mt-3 flex">
         <img src={image} className="w-8 h-8 rounded-full" />
@@ -149,7 +190,7 @@ const Testimonials = () => {
     },
   ];
   return (
-    <div className="outline-white flex flex-wrap items-center justify-center space-y-6 my-36">
+    <div className="outline-white flex flex-wrap items-center justify-center my-12">
       {testimonials.map((t) => (
         <TestimonialCard key={t.name} {...t} />
       ))}
