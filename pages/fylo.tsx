@@ -232,7 +232,8 @@ const SignupForm = () => {
   return (
     <div className="relative">
       <div className="bg-fyloBlue h-60"></div>
-      <div className="bg-fyloBlueLight rounded-lg max-w-xs md:max-w-sm lg:max-w-xl space-y-3 p-5 absolute top-1/4 right-1/4">
+      {/** https://www.beacontechnologies.com/blog/2015/07/center-an-absolute-positioned-div.aspx */}
+      <div className="bg-fyloBlueLight rounded-lg max-w-xs md:max-w-sm lg:max-w-xl space-y-3 p-5 absolute top-1/4 left-0 right-0 m-auto">
         <h3 className="text-gray-200 text-center lg:text-xl">
           Get early access today
         </h3>
