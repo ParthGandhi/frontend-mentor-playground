@@ -5,8 +5,8 @@ import { LogoFacebook, LogoTwitter, LogoInstagram } from "react-ionicons";
 
 const Footer = () => {
   return (
-    <div className="bg-fyloBlueFooter ">
-      <img src="/fylo/logo.svg" className="mx-8 h-12 my-5" />
+    <div className="bg-fyloBlueFooter">
+      <img src="/fylo/logo.svg" className="mx-8 h-12" />
 
       <div className="grid grid-cols-1 mx-10 my-5 gap-y-9 gap-x-5 md:grid-cols-2 lg:grid-cols-4">
         {/** Contact information */}
@@ -228,6 +228,30 @@ const PrimaryDescriptionCTA = () => {
   );
 };
 
+const SignupForm = () => {
+  return (
+    <div className="relative">
+      <div className="bg-fyloBlue h-60"></div>
+      <div className="bg-fyloBlueLight rounded-lg max-w-xs md:max-w-sm lg:max-w-xl space-y-3 p-5 absolute top-1/4 right-1/4">
+        <h3 className="text-gray-200 text-center lg:text-xl">
+          Get early access today
+        </h3>
+        <p className="text-gray-300 text-center text-sm">
+          It only takes a minute to sign up up and our free starter tier is
+          extremely generous. If you have any questions, our support team would
+          be happhy to help you.
+        </p>
+        <div className="flex justify-center">
+          <button className="rounded-3xl text-gray-100 bg-blue-400 px-10 py-3">
+            Get Started for free
+          </button>
+        </div>
+      </div>
+      <div className="bg-fyloBlueFooter h-60"></div>
+    </div>
+  );
+};
+
 /**
  * https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd
  */
@@ -238,6 +262,7 @@ const FyloLandingPage: NextPage = () => {
       <FeaturesSection />
       <StayProductiveSection />
       <Testimonials />
+      <SignupForm />
       <Footer />
     </div>
   );
