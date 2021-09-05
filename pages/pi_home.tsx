@@ -55,8 +55,66 @@ const PrimaryCTASection = () => {
 
 const PerformanceGraph = () => {
   return (
-    <div className="bg-white h-64 w-full text-center">
+    <div className="bg-white h-64 w-full text-center shadow">
       <h3>TODO Graph</h3>
+    </div>
+  );
+};
+
+const FundCategory = ({
+  name,
+  description,
+  numFunds,
+}: {
+  name: string;
+  description: string;
+  numFunds: number;
+}) => {
+  return (
+    <div className="bg-white shadow rounded-md w-72 h-40 relative">
+      <div className="p-3">
+        <h3 className="text-pi-purple text-lg">{name}</h3>
+        <p className="text-xs font-thin leading-tight">{description}</p>
+      </div>
+      <div className="text-center text-pi-purple font-thin border-t-2 border-opacity-30 absolute bottom-0 w-full h-8">
+        See {numFunds} Funds
+      </div>
+    </div>
+  );
+};
+
+const FundCategories = () => {
+  const categories = [
+    {
+      name: "Indian Equity Index Funds",
+      description:
+        "Participate in the India growth story by investing in the top stocks from Nifty, Sensex, and other indices.",
+      numFunds: 345,
+    },
+    {
+      name: "Indian Debt Index Funds",
+      description:
+        "Invest in high quality, diversified, fixed income instruments from steady growth.",
+      numFunds: 234,
+    },
+    {
+      name: "US Equity Index Funds",
+      description:
+        "Invest in top US multinationals in NASDAQ, S&P500, and other indices.",
+      numFunds: 123,
+    },
+    {
+      name: "Strategix Index Funds",
+      description:
+        "Invest in factor based and quantitative index funds with higher historic equity premium.",
+      numFunds: 345,
+    },
+  ];
+  return (
+    <div className="flex flex-wrap justify-between mt-5">
+      {categories.map((c) => (
+        <FundCategory key={c.name} {...c} />
+      ))}
     </div>
   );
 };
@@ -68,6 +126,7 @@ const PIHomePage: NextPage = () => {
         <Header />
         <PrimaryCTASection />
         <PerformanceGraph />
+        <FundCategories />
       </div>
     </div>
   );
