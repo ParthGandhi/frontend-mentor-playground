@@ -53,12 +53,21 @@ const PrimaryCTASection = () => {
   );
 };
 
+const PerformanceGraph = () => {
+  return (
+    <div className="bg-white h-64 w-full text-center">
+      <h3>TODO Graph</h3>
+    </div>
+  );
+};
+
 const PIHomePage: NextPage = () => {
   return (
     <div className="bg-pi-gray w-screen h-screen">
       <div className="mx-5">
         <Header />
         <PrimaryCTASection />
+        <PerformanceGraph />
       </div>
     </div>
   );
