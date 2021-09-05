@@ -1,17 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@400;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer components {
-  .btn {
-    @apply px-5 py-3 inline-block rounded-lg 
-                uppercase tracking-wider font-semibold text-sm sm:text-base
-                focus:outline-none focus:ring focus:ring-offset-2  focus:ring-opacity-50;
-  }
-  .btn-primary {
-    @apply bg-indigo-500 text-white hover:bg-indigo-400 focus:ring-indigo-500 focus:ring-opacity-50 active:bg-indigo-600;
-  }
-  .btn-secondary {
-    @apply bg-gray-300 text-gray-800 hover:bg-gray-200 focus:ring-gray-300 focus:ring-opacity-50 active:bg-gray-400;
-  }
-}

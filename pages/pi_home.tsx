@@ -6,7 +6,7 @@ const Header = () => {
       <div className="bg-pi-purple text-gray-100 font-extralight text-md flex-none px-3 py-3 leading-5 w-48 h-full">
         Passive Fund Catalogue
       </div>
-      <div className="flex-auto mx-5 shadow border-2 rounded-md flex justify-end">
+      <div className="flex-auto mx-5 shadow border-2 rounded-md flex justify-end font-nunito-sans">
         <input
           type="search"
           placeholder="Start your search here..."
@@ -121,7 +121,7 @@ const FundCategories = () => {
 
 const PIHomePage: NextPage = () => {
   return (
-    <div className="bg-pi-gray w-screen h-screen">
+    <div className="bg-pi-gray w-screen h-screen font-nunito">
       <div className="mx-5">
         <Header />
         <PrimaryCTASection />

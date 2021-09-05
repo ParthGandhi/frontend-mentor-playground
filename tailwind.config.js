@@ -11,6 +11,10 @@ module.exports = {
         "pi-purple": "#5D5FEF",
         "pi-gray": "#F2F2F2",
       },
+      fontFamily: {
+        "nunito-sans": ["Nunito Sans"],
+        nunito: ["Nunito"],
+      },
     },
   },
   variants: {
