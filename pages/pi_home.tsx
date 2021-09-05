@@ -2,7 +2,7 @@ import { NextPage } from "next";
 
 const Header = () => {
   return (
-    <div className="bg-white flex h-16 mx-5 items-center">
+    <div className="bg-white flex h-16 items-center">
       <div className="bg-pi-purple text-gray-100 font-extralight text-md flex-none px-3 py-3 leading-5 w-48 h-full">
         Passive Fund Catalogue
       </div>
@@ -30,10 +30,36 @@ const Header = () => {
   );
 };
 
+const PrimaryCTASection = () => {
+  return (
+    <div className="flex h-64 items-end justify-between">
+      <div className="w-96 p-3">
+        <h1 className="text-4xl text-pi-purple font-light">
+          {/** Can a br be avoided here? */}
+          Get Started <br />
+          with Index Investing
+        </h1>
+        <p className="text-gray-800 font-light">
+          Grow with the market using simple, low cost, efficient assets
+        </p>
+      </div>
+      {/** How to crop svg correctly? */}
+      <img
+        src="/pi_home/smiling-couple-cropped.svg"
+        alt="smiling couple"
+        className="h-64"
+      />
+    </div>
+  );
+};
+
 const PIHomePage: NextPage = () => {
   return (
     <div className="bg-pi-gray w-screen h-screen">
-      <Header />
+      <div className="mx-5">
+        <Header />
+        <PrimaryCTASection />
+      </div>
     </div>
   );
 };
