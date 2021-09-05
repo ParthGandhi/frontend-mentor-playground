@@ -71,12 +71,12 @@ const FundCategory = ({
   numFunds: number;
 }) => {
   return (
-    <div className="bg-white shadow rounded-md w-72 h-40 relative">
+    <div className="bg-white shadow rounded-md w-72 h-36 relative">
       <div className="p-3">
         <h3 className="text-pi-purple text-lg">{name}</h3>
-        <p className="text-xs font-thin leading-tight">{description}</p>
+        <p className="text-xs font-thin leading-tight mt-3">{description}</p>
       </div>
-      <div className="text-center text-pi-purple font-thin border-t-2 border-opacity-30 absolute bottom-0 w-full h-8">
+      <div className="text-center text-pi-purple font-thin border-t-2 border-opacity-30 absolute bottom-0 w-full h-8 text-xs">
         See {numFunds} Funds
       </div>
     </div>
@@ -104,7 +104,7 @@ const FundCategories = () => {
       numFunds: 123,
     },
     {
-      name: "Strategix Index Funds",
+      name: "Strategic Index Funds",
       description:
         "Invest in factor based and quantitative index funds with higher historic equity premium.",
       numFunds: 345,
