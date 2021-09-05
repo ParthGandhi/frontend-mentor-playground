@@ -8,6 +8,8 @@ module.exports = {
         fyloBlueLight: "hsl(217, 28%, 15%)",
         fyloBlueXLight: "hsl(219, 30%, 18%)",
         fyloBlueFooter: "hsl(216, 53%, 9%)",
+        "pi-purple": "#5D5FEF",
+        "pi-gray": "#F2F2F2",
       },
     },
   },
@@ -16,5 +18,5 @@ module.exports = {
       backgroundColor: ["active"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
